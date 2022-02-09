@@ -1,0 +1,18 @@
+version: "3"
+networks:
+  jaeger:
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+    - "6831:6831/udp"
+    - "16686:16686"
+    - "14268:14268"
+    networks:
+    - jaeger
+  grafana:
+    image: grafana/grafana:8.2.2
+    ports:
+    - "3000:3000"
+    networks:
+    - jaeger

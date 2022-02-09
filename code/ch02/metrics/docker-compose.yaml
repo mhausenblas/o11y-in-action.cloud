@@ -1,0 +1,18 @@
+version: "3"
+networks:
+  prom:
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prom-config.yaml:/etc/prometheus/prometheus.yml
+    networks:
+      - prom
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - prom

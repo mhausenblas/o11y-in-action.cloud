@@ -1,0 +1,4 @@
+vendor/
+.idea
+echosvc
+.DS_Store

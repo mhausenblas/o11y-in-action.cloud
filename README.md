@@ -1,19 +1,70 @@
-Observability is the capability to continuously generate and discover actionable insights based on signals from the system under observation with the goal to influence the system. In this book you will learn about telemetry, destinations, and how to use different signal types (logs, metrics, traces, profiles).
+## Cloud Observability in Action
 
-The first couple of chapters will soon be available via the [Manning MEAP Program](https://www.manning.com/meap-program). Here is the WIP table of contents:
+Welcome to Cloud Observability in Action, your hands-on guide to applying
+observability in the context of cloud native environments.
 
-## Ch 1. End-to-end Observability Example
-In the context of this book we focus on cloud native environments such as Kubernetes or serverless offerings such as AWS Lambda. We mainly use open source observability tooling so that you can try out everything without license costs. However, it is important that while we use open source tooling to show the concepts in action, they are universally applicable. In this chapter we have a look at an end-to-end example and define terminology.
+> Observability is the capability to continuously generate and discover 
+> actionable insights based on signals from the system under observation 
+> with the goal to influence the system.
 
-* Introducing Observability
-* Example Microservices App
-* Cloud Native Challenges and How Observability Helps
+In this book you will learn about the basic signal types (logs, metrics, traces,
+profiles), telemetry including agents, back-end and front-end destinations, 
+and goood practices around dashboarding, alerting, and SLOs/SLIs.
 
-## Ch 2. Signal Types
-In this chapter we review different signal types most often used, how to instrument and collect each, and discuss the costs and benefits of doing that. With observability you want to take an Return-On-Investment (ROI) driven approach. In other words, you need to understand the costs of each signal type and what it enables you to do.
+The book will soon be available via the [Manning MEAP Program](https://www.manning.com/meap-program)
+and you can find [code snippets](code/) we use throughout the book via the 
+site you're on, currently.
 
-* Overview
+The WIP table of contents looks as follows:
+
+## Chapter 1: End-to-end Observability Example
+In the context of this book we focus on cloud native environments such as 
+Kubernetes and serverless offerings (such as FaaS like AWS Lambda). We mainly
+use open source observability tooling (Grafana, Prometheus, Jaeger) so that 
+you can try out everything without license costs. While it is important that
+we use open source tooling to show the concepts in action, they are universally
+applicable (that is, using any of the commerical offerings). 
+In this chapter we have a look at an end-to-end example and define terminology,
+from sources to agents to destinations.
+
+* Introducing observability
+* Example microservices app in action
+* Challenges and how observability helps
+
+## Chapter 2: Signal Types
+In this chapter we review different signal types most often used, 
+how to instrument and collect each, and discuss the costs and benefits of doing 
+that. With observability you want to take an Return-On-Investment (ROI) driven
+approach. In other words, you need to understand the costs of each signal type 
+and what it enables you to do.
+
+* Reference example
+* Assessing costs
 * Logs
 * Metrics
 * Traces
-* Good Practices
+* Selecting signals
+
+## Chapter 3: Sources
+TBD.
+
+## Chapter 4: Agents
+TBD.
+
+## Chapter 5: Back-end Destinations
+TBD.
+
+## Chapter 6: Front-end Destinations
+TBD.
+
+## Chapter 7: Alerting
+TBD.
+
+## Chapter 8: Distributed Tracing
+TBD.
+
+## Chapter 9: Continuous Profiling
+TBD.
+
+## Chapter 10: Service Level Objectives
+TBD.
