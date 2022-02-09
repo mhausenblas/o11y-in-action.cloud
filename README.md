@@ -12,7 +12,7 @@ profiles), telemetry including agents, back-end and front-end destinations,
 and goood practices around dashboarding, alerting, and SLOs/SLIs.
 
 The book will soon be available via the [Manning MEAP Program](https://www.manning.com/meap-program)
-and you can find [code snippets](code/) we use throughout the book via the 
+and you can find [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) we use throughout the book via the 
 site you're on, currently.
 
 The WIP table of contents looks as follows:
