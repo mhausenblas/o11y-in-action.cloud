@@ -11,7 +11,7 @@ In this book you will learn about the basic signal types (logs, metrics, traces,
 profiles), telemetry including agents, back-end and front-end destinations, 
 and goood practices around dashboarding, alerting, and SLOs/SLIs.
 
-The book will soon be available via the [Manning MEAP Program](https://www.manning.com/meap-program)
+Some chapters of the book are now available via the [Manning MEAP Program](https://www.manning.com/books/cloud-observability-in-action)
 and you can find [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) we use throughout the book via the 
 site you're on, currently.
 
