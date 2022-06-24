@@ -7,6 +7,8 @@ observability in the context of cloud native environments.
 > actionable insights based on signals from the system under observation 
 > with the goal to influence the system.
 
+![MEAP cover](co11yia-meap-cover.png)
+
 In this book you will learn about the basic signal types (logs, metrics, traces,
 profiles), telemetry including agents, back-end and front-end destinations, 
 and goood practices around dashboarding, alerting, and SLOs/SLIs.
@@ -46,10 +48,18 @@ and what it enables you to do.
 * Selecting signals
 
 ## Chapter 3: Sources
-TBD.
+This chapter covers signal sources. We discuss the type of sources that exist
+and when to select which source, how you can gain actionable insights from selecting
+the right sources for a task and how to deal with code you own including supply chain aspects.
+
+* Selecting sources
+* Compute-related sources
+* Storage-related sources
+* Network-related sources
+* Your code (instrumentation)
 
 ## Chapter 4: Agents
-TBD.
+ETA: 07/2022
 
 ## Chapter 5: Back-end Destinations
 TBD.
