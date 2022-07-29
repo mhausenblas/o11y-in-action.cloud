@@ -22,7 +22,10 @@ func handleEcho(w http.ResponseWriter, r *http.Request) {
 		log.WithFields(log.Fields{
 			"service": "echo",
 		}).Error("Something really bad happened :(")
-		invokes.WithLabelValues(strconv.Itoa(http.StatusInternalServerError)).Inc() // <5>
+		invokes.WithLabelValues(
+			strconv.Itoa(
+				http.StatusInternalServerError
+			)).Inc() // <5>
 		w.WriteHeader(500)
 		return
 	}
