@@ -1,0 +1,40 @@
+receivers:
+  otlp: # <1>
+    protocols:
+      grpc:
+        endpoint: "0.0.0.0:4317"
+  prometheus: # <2>
+    config:
+      scrape_configs:
+       - job_name: "ho11y"
+         static_configs:
+         - targets: ["ho11y:8765"]
+
+processors:
+  batch:
+
+exporters:
+  logging:
+    loglevel: debug
+  prometheus: # <1>
+    endpoint: "0.0.0.0:9292"
+  jaeger: # <2>
+    endpoint: "jaeger:14250"
+    tls:
+      insecure: true
+
+service:
+  telemetry: # <1>
+    logs:
+      level: debug
+    metrics:
+      level: detailed
+  pipelines: # <2>
+    metrics: # <3>
+      receivers: [prometheus]
+      processors: [batch]
+      exporters: [logging, prometheus]
+    traces: # <4>
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, jaeger]

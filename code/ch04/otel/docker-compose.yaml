@@ -1,0 +1,51 @@
+version: "3"
+services:
+  load-gen:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command:
+    - "/bin/bash"
+    - "-c"
+    - "while : ; do curl -s -o /dev/null ho11y:8765 ; sleep 1; done"
+    depends_on:
+    - ho11y
+
+  ho11y:
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - "8765:8765" # <1>
+    environment:
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317" # <2>
+    - "OTEL_RESOURCE_ATTRIB=ho11y"
+    - "HO11Y_INJECT_FAILURE=enabled"
+    depends_on:
+     - otel-collector
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.55.0
+    command: ["--config=/conf/otel-collector-config.yaml"] # <1>
+    volumes:
+    - ./otel-config.yaml:/conf/otel-collector-config.yaml # <2>
+    ports:
+    - "4317:4317"   # <3>
+    - "8888:8888"   # <4>
+    - "9292:9292"   # <5>
+    - "13133"       # <6>
+    depends_on:
+    - prometheus
+    - jaeger
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+    - "9090:9090"
+    volumes:
+    - ./prom-config.yaml:/etc/prometheus/prometheus.yml
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.36
+    ports:
+    - "5778:5778"   # <1>
+    - "14250:14250" # <2>
+    - "16686:16686" # <3>
+    environment:
+    - "COLLECTOR_OTLP_ENABLED=true"
