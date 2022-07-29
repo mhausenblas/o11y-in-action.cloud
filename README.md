@@ -7,11 +7,13 @@ observability in the context of cloud native environments.
 > actionable insights based on signals from the system under observation 
 > with the goal to influence the system.
 
+![MEAP cover](co11yia-meap-cover.png)
+
 In this book you will learn about the basic signal types (logs, metrics, traces,
 profiles), telemetry including agents, back-end and front-end destinations, 
 and goood practices around dashboarding, alerting, and SLOs/SLIs.
 
-The book will soon be available via the [Manning MEAP Program](https://www.manning.com/meap-program)
+Some chapters of the book are now available via the [Manning MEAP Program](https://www.manning.com/books/cloud-observability-in-action)
 and you can find [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) we use throughout the book via the 
 site you're on, currently.
 
@@ -46,10 +48,18 @@ and what it enables you to do.
 * Selecting signals
 
 ## Chapter 3: Sources
-TBD.
+This chapter covers signal sources. We discuss the type of sources that exist
+and when to select which source, how you can gain actionable insights from selecting
+the right sources for a task and how to deal with code you own including supply chain aspects.
+
+* Selecting sources
+* Compute-related sources
+* Storage-related sources
+* Network-related sources
+* Your code (instrumentation)
 
 ## Chapter 4: Agents
-TBD.
+ETA: 07/2022
 
 ## Chapter 5: Back-end Destinations
 TBD.
