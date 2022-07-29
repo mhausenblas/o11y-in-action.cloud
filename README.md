@@ -29,9 +29,10 @@ applicable (that is, using any of the commerical offerings).
 In this chapter we have a look at an end-to-end example and define terminology,
 from sources to agents to destinations.
 
-* Introducing observability
-* Example microservices app in action
-* Challenges and how observability helps
+1. What is Observability?
+1. Roles and Goals
+1. Example Microservices App
+1. Challenges and How Observability Helps
 
 ## Chapter 2: Signal Types
 In this chapter we review different signal types most often used, 
@@ -40,41 +41,52 @@ that. With observability you want to take an Return-On-Investment (ROI) driven
 approach. In other words, you need to understand the costs of each signal type 
 and what it enables you to do.
 
-* Reference example
-* Assessing costs
-* Logs
-* Metrics
-* Traces
-* Selecting signals
+1. Reference Example
+1. Assessing Instrumentation Costs
+1. Logs
+1. Metrics
+1. Traces
+1. Selecting Signals
 
 ## Chapter 3: Sources
 This chapter covers signal sources. We discuss the type of sources that exist
 and when to select which source, how you can gain actionable insights from selecting
-the right sources for a task and how to deal with code you own including supply chain aspects.
+the right sources for a task and how to deal with code you own including supply
+chain aspects.
 
-* Selecting sources
-* Compute-related sources
-* Storage-related sources
-* Network-related sources
-* Your code (instrumentation)
+1. Selecting Sources
+1. Compute-related Sources
+1. Storage-related Sources
+1. Network-related Sources
+1. Your Code
 
 ## Chapter 4: Agents
-ETA: 07/2022
+In this chapter we discuss instrumentation and review different agents,
+from log routers to OpenTelemetry. You will learn how to select and use agents
+with an emphasis on what OpenTelemetry brings to the table for unified telemetry,
+including correlation of signals.
+
+1. Log Routers
+1. Metrics Collection
+1. OpenTelemetry
+1. Other Agents
+1. Selecting An Agent
 
 ## Chapter 5: Back-end Destinations
-TBD.
+ETA: 08/2022
 
 ## Chapter 6: Front-end Destinations
-TBD.
+ETA: 09/2022
 
 ## Chapter 7: Alerting
-TBD.
+ETA: 09/2022
 
 ## Chapter 8: Distributed Tracing
-TBD.
+ETA: 10/2022
 
 ## Chapter 9: Continuous Profiling
-TBD.
+ETA: 11/2022
 
 ## Chapter 10: Service Level Objectives
-TBD.
+ETA: 11/2022
+
