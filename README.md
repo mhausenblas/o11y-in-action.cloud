@@ -78,7 +78,7 @@ ETA: 08/2022
 ## Chapter 6: Front-end Destinations
 ETA: 09/2022
 
-## Chapter 7: Alerting
+## Chapter 7: Cloud Operations
 ETA: 09/2022
 
 ## Chapter 8: Distributed Tracing
