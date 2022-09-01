@@ -1,0 +1,53 @@
+version: "3"
+services:
+  load-gen:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command:
+    - "/bin/bash"
+    - "-c"
+    - "while : ; do curl -s -o /dev/null ho11y:8765 ; sleep .2; done"
+    depends_on:
+    - ho11y
+
+  ho11y:
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+      - 8765:8765
+    environment:
+    - "OTEL_RESOURCE_ATTRIB=ho11y"
+    - "HO11Y_INJECT_FAILURE=enabled"
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:8006" # <1>
+    depends_on:
+    - otel-collector
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.55.0
+    command: ["--config=/conf/otel-collector-config.yaml"]
+    volumes:
+    - ./otel-config.yaml:/conf/otel-collector-config.yaml
+    ports:
+    - "8006:8006" # <2>
+    depends_on:
+    - ch-otel-setup
+
+  ch-otel-setup:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command: "/tmp/setup.sh"
+    volumes:
+    - ./setup.sh:/tmp/setup.sh
+    depends_on:
+    - clickhouse-server
+
+  clickhouse-server: # <3>
+    image: clickhouse/clickhouse-server
+    ports:
+    - "8123:8123"
+    - "9000:9000"
+    ulimits: # <4>
+      nproc: 65535
+      nofile:
+        soft: 262144
+        hard: 262144

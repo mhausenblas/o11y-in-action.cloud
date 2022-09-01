@@ -1,0 +1,27 @@
+receivers:
+  syslog: # <1>
+    tcp:
+      listen_address: "0.0.0.0:54526"
+    protocol: rfc3164
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 100000
+
+exporters:
+  logging:
+    loglevel: debug
+  clickhouse:  # <2>
+    dsn: tcp://clickhouse-server:9000/default
+    ttl_days: 3
+
+service:
+  telemetry:
+    logs:
+      level: debug
+  pipelines:
+    logs:  # <3>
+      receivers: [ syslog ]
+      processors: [ batch ]
+      exporters: [ logging, clickhouse ]

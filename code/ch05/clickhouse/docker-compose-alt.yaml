@@ -1,0 +1,39 @@
+version: "3"
+services:
+  load-gen:
+    image: someguy123/net-tools
+    command: "/tmp/generate-logs.sh"
+    volumes:
+    - ./generate-logs.sh:/tmp/generate-logs.sh
+    depends_on:
+    - otel-collector
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.55.0
+    command: ["--config=/conf/otel-collector-config.yaml"] # <1>
+    volumes:
+    - ./otel-config.yaml:/conf/otel-collector-config.yaml # <2>
+    ports:
+    - "54526:54526" # <3>
+    depends_on:
+    - ch-otel-setup
+
+  ch-otel-setup:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command: "/tmp/setup.sh"
+    volumes:
+    - ./setup.sh:/tmp/setup.sh
+    depends_on:
+    - clickhouse-server
+
+  clickhouse-server:
+    image: clickhouse/clickhouse-server # <4>
+    ports:
+    - "8123:8123"
+    - "9000:9000"
+    - "9009:9009"
+    ulimits: # <5>
+      nproc: 65535
+      nofile:
+        soft: 262144
+        hard: 262144
