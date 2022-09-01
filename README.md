@@ -13,8 +13,10 @@ In this book you will learn about the basic signal types (logs, metrics, traces,
 profiles), telemetry including agents, back-end and front-end destinations, 
 and goood practices around dashboarding, alerting, and SLOs/SLIs.
 
-Some chapters of the book are now available via the [Manning MEAP Program](https://www.manning.com/books/cloud-observability-in-action)
-and you can find [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) we use throughout the book via the 
+The first five chapters of the book are now available via the
+[Manning MEAP Program](https://www.manning.com/books/cloud-observability-in-action)
+and you can find all the [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) 
+we use for the hands-on exercises throughout the book via the 
 site you're on, currently.
 
 The WIP table of contents looks as follows:
@@ -73,7 +75,17 @@ including correlation of signals.
 1. Selecting An Agent
 
 ## Chapter 5: Back-end Destinations
-ETA: 08/2022
+The chapter focuses on back-ends as the source of truth for your telemetry
+signals. You will learn to use and select back-ends for logs, metrics, and
+traces with deep dives on TSDBs and column-oriented datastores such as
+ClickHouse.
+
+1. Back-end Destinations Terminology
+1. Back-end Destinations for Logs
+1. Back-end Destinations for Metrics
+1. Back-end Destinations for Traces
+1. Columnar Datastores
+1. Selecting Back-End Destinations
 
 ## Chapter 6: Front-end Destinations
 ETA: 09/2022
