@@ -88,17 +88,23 @@ ClickHouse.
 1. Selecting Back-End Destinations
 
 ## Chapter 6: Front-end Destinations
-ETA: 09/2022
+In the chapter we talk about front-ends as the place where you consume
+the telemetry signals. You will learn about pure front-ends and all-in-ones
+and how to go about selecting them.
+
+1. Front-ends (Grafana, Kibana/OpenSearch Dashboards)
+1. All-in-ones (Jaeger, Pixie, commerical offerings)
+1. Selecting Front-ends and All-in-ones
 
 ## Chapter 7: Cloud Operations
-ETA: 09/2022
+ETA: 12/2022
 
 ## Chapter 8: Distributed Tracing
-ETA: 10/2022
+ETA: 01/2023
 
-## Chapter 9: Continuous Profiling
-ETA: 11/2022
+## Chapter 9: Developer Observability
+ETA: 01/2023
 
 ## Chapter 10: Service Level Objectives
-ETA: 11/2022
+ETA: 02/2023
 
