@@ -97,14 +97,21 @@ and how to go about selecting them.
 1. Selecting Front-ends and All-in-ones
 
 ## Chapter 7: Cloud Operations
-ETA: 12/2022
+This chapter covers an aspect of cloud native solutions called "cloud operations" 
+including how to detect when something is not working the way that it should, 
+how to react to abnormal behavior, and how to learn from previous mistakes. 
+You will also learn about alerting, usage, and cost tracking.
+
+1. How to manage incidents
+1. Health monitoring and alerts
+1. Governance, usage, and cost tracking
 
 ## Chapter 8: Distributed Tracing
-ETA: 01/2023
+ETA: 02/2023
 
 ## Chapter 9: Developer Observability
-ETA: 01/2023
+ETA: 03/2023
 
 ## Chapter 10: Service Level Objectives
-ETA: 02/2023
+ETA: 03/2023
 
