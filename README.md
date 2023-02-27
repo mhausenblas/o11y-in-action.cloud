@@ -1,6 +1,6 @@
-## Cloud Observability in Action
+## Cloud Native Observability in Action
 
-Welcome to Cloud Observability in Action, your hands-on guide to applying
+Welcome to Cloud Native Observability in Action, your hands-on guide to applying
 observability in the context of cloud native environments.
 
 > Observability is the capability to continuously generate and discover 
