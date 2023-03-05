@@ -107,11 +107,36 @@ You will also learn about alerting, usage, and cost tracking.
 1. Governance, usage, and cost tracking
 
 ## Chapter 8: Distributed Tracing
-ETA: 02/2023
+_ETA: 03/2023_
+
+This chapter covers:
+
+* What Distributed Tracing is and why it's important
+* Seeing Distributed Tracing in action for troubleshooting
+* Considerations on how and where to use Distributed Tracing
+* How to go about selecting a Distributed Tracing solution
 
 ## Chapter 9: Developer Observability
-ETA: 03/2023
+_ETA: 03/2023_
+
+This chapter covers:
+
+* What developer observability means
+* What continuous profiling is and why you should care
+* How observability drives developer productivity and what tooling is available
+
 
 ## Chapter 10: Service Level Objectives
-ETA: 03/2023
+_ETA: 03/2023_
 
+This chapter covers:
+
+* What we mean by Service Level Objectives (SLO)
+* How you can implement SLOs
+* The tooling available in the SLO space
+* Considerations for implementing SLOs
+
+
+## Appendix A
+
+Hands-on walkthrough of the [OpenTelemetry Demo](https://opentelemetry.io/docs/demo/).
