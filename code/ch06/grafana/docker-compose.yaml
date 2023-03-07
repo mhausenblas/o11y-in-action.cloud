@@ -1,0 +1,18 @@
+version: "3"
+services:
+  grafana:
+    image: grafana/grafana-oss:9.1.4
+    ports:
+    - "3000:3000"
+    volumes:
+    - ./grafana.ini:/etc/grafana/grafana.ini # <1>
+    - ./ds.yaml:/etc/grafana/provisioning/datasources/datasource.yaml # <2>
+    depends_on:
+    - prometheus
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+    - "9090:9090"
+    volumes:
+    - ./prom-config.yaml:/etc/prometheus/prometheus.yml

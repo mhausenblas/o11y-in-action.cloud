@@ -1,0 +1,10 @@
+groups:
+- name: alert.rules
+  rules:
+  - alert: TooManyAPICalls # <1>
+    expr: sum(prometheus_http_requests_total) > 40 # <2>
+    labels:
+      severity: "critical" # <3>
+    annotations:
+      summary: "Too many API calls"
+      description: "The Prometheus instance {{ $labels.instance }} is experiencing too many API calls"

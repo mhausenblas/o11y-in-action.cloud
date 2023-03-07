@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  prometheus: # <1>
+    image: prom/prometheus:latest
+    ports:
+    - "9090:9090"
+    volumes:
+    - ./prom-config.yaml:/etc/prometheus/prometheus.yml
+    - ./alerting.yaml:/etc/prometheus/alert.rules
+
+  alertmanager: # <2>
+    image: prom/alertmanager:latest
+    volumes:
+    - ./am-config.yaml:/etc/alertmanager/alertmanager.yml
+    ports:
+    - "9093:9093"
+
+  webhook: # <3>
+    image: kennethreitz/httpbin
+    ports:
+    - "9999:80"

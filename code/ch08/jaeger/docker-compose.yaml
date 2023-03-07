@@ -1,0 +1,97 @@
+version: "3"
+services:
+  load-gen:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command:
+    - "/bin/bash"
+    - "-c"
+    - "sleep 15; while : ; do curl -s -o /dev/null frontend:8765 ; sleep .1; done"
+    depends_on:
+    - frontend
+
+  frontend: # <1>
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8765:8765
+    environment:
+    - "DOWNSTREAM0=http://service-a:8766"
+    - "DOWNSTREAM1=http://service-b:8767"
+    - "DOWNSTREAM2=https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.png"
+    - "OTEL_RESOURCE_ATTRIB=frontend"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    depends_on:
+    - service-a
+    - service-b
+
+  service-a: # <2>
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8766:8766
+    environment:
+    - "HO11Y_PORT=8766"
+    - "DOWNSTREAM0=https://mhausenblas.info/"
+    - "DOWNSTREAM1=https://otel.help/"
+    - "OTEL_RESOURCE_ATTRIB=service-a"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    depends_on:
+    - otel-collector
+
+  service-b: # <3>
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8767:8767
+    environment:
+    - "HO11Y_PORT=8767"
+    - "DOWNSTREAM0=http://service-b0:8768"
+    - "DOWNSTREAM1=http://service-b1:8769"
+    - "OTEL_RESOURCE_ATTRIB=service-b"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    depends_on:
+    - service-b0
+    - service-b1
+
+  service-b0: # <4>
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8768:8768
+    environment:
+    - "HO11Y_PORT=8768"
+    - "DOWNSTREAM0=https://example.net/"
+    - "OTEL_RESOURCE_ATTRIB=service-b0"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    # - "HO11Y_CUTOFF_TPS=1"
+    depends_on:
+    - otel-collector
+
+  service-b1: # <5>
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8769:8769
+    environment:
+    - "HO11Y_PORT=8769"
+    - "DOWNSTREAM0=https://www.w3.org/TR/trace-context/"
+    - "DOWNSTREAM1=https://example.org/"
+    - "OTEL_RESOURCE_ATTRIB=service-b1"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    # - "HO11Y_INJECT_FAILURE=enabled"
+    depends_on:
+    - otel-collector
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.68.0
+    command: [
+      "--config=/conf/otel-collector-config.yaml"
+    ]
+    volumes:
+    - ./otel-config.yaml:/conf/otel-collector-config.yaml
+    ports:
+    - "4317:4317"
+    depends_on:
+    - jaeger
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.36
+    ports:
+    - "9090:9090"
+    - "16686:16686"
+    - "14250:14250"

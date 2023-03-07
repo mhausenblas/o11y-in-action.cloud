@@ -1,0 +1,28 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 500
+
+exporters:
+  logging:
+    loglevel: debug
+  jaeger: # <1>
+    endpoint: jaeger:14250
+    tls:
+      insecure: true
+
+service:
+  telemetry:
+    logs:
+      level: debug
+  pipelines:
+    traces: # <2>
+      receivers: [ otlp ]
+      processors: [ batch ]
+      exporters: [ logging, jaeger ]

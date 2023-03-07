@@ -1,0 +1,22 @@
+version: "3"
+services:
+  kafka-zookeeper:
+    image: ghcr.io/openzipkin/zipkin-kafka:latest
+    container_name: kafka-zookeeper
+    # environment:
+      # - KAFKA_ADVERTISED_HOST_NAME=192.168.99.100
+    ports:
+    - 19092:19092
+
+  zipkin:
+    image: ghcr.io/openzipkin/zipkin:latest
+    container_name: zipkin
+    environment:
+    - STORAGE_TYPE=mem
+    - MYSQL_HOST=mysql
+    - SELF_TRACING_ENABLED=true
+    - KAFKA_BOOTSTRAP_SERVERS=kafka-zookeeper:9092
+    ports:
+    - 9411:9411
+    depends_on:
+    - kafka-zookeeper

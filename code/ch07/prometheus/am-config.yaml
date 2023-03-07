@@ -1,0 +1,7 @@
+route:
+  group_by: ["env"] # <1>
+  receiver: "mywebhook" # <2>
+receivers:
+- name: "mywebhook"
+  webhook_configs: # <3>
+  - url: "http://webhook:80/anything"
