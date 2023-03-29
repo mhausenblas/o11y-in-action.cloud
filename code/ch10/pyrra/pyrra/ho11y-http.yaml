@@ -1,0 +1,17 @@
+apiVersion: pyrra.dev/v1alpha1
+kind: ServiceLevelObjective
+metadata:
+  name: ho11y-api-query # <1>
+  namespace: monitoring
+  labels:
+    prometheus: k8s
+    role: alert-rules
+spec:
+  target: '75.0' # <2>
+  window: 7d
+  indicator:
+    ratio:
+      errors: # <3>
+        metric: ho11y_total{job="svc",http_status_code=~"4.."}
+      total: # <4>
+        metric: ho11y_total{job="svc"}

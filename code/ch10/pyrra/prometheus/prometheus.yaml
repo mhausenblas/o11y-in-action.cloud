@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 5s
+  scrape_timeout: 3s
+  evaluation_interval: 5s
+
+rule_files: # <1>
+  - 'pyrra/*.yaml'
+
+scrape_configs: # <2>
+- job_name: prometheus
+  static_configs:
+  - targets:
+    - localhost:9090
+- job_name: svc
+  static_configs:
+  - targets:
+    - svc:8765

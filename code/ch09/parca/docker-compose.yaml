@@ -1,0 +1,42 @@
+version: "3"
+services:
+  load-gen:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command:
+    - "/bin/bash"
+    - "-c"
+    - "sleep 15; while : ; do curl -s -o /dev/null svc:8765 ; sleep 1; done"
+    depends_on:
+    - svc
+
+  svc:
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8765:8765
+    environment:
+    - "OTEL_RESOURCE_ATTRIB=svc"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    depends_on:
+    - otel-collector
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.68.0
+    command: [
+      "--config=/conf/otel-collector-config.yaml"
+    ]
+    volumes:
+    - ./otel-config.yaml:/conf/otel-collector-config.yaml
+    ports:
+    - "4317:4317"
+    - "1777:1777" # <1>
+    depends_on:
+    - parca
+
+  parca: # <2>
+    image: ghcr.io/parca-dev/parca:v0.15.0
+    command: /parca --config-path=/opt/parca.yaml
+    ports:
+    - "7070:7070"
+    volumes:
+    - "./parca.yaml:/opt/parca.yaml" # <3>
+

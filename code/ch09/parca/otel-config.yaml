@@ -1,0 +1,19 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+
+exporters:
+  logging:
+    loglevel: debug
+
+extensions: # <1>
+  pprof:
+    endpoint: "otel-collector:1777"
+
+service:
+  pipelines:
+    traces: # <2>
+      receivers: [ otlp ]
+      exporters: [ logging ] # <3>

@@ -1,0 +1,58 @@
+version: "3"
+services:
+  load-gen:
+    image: ellerbrock/alpine-bash-curl-ssl:latest
+    command:
+    - "/bin/bash"
+    - "-c"
+    - "sleep 15; while : ; do curl -s -o /dev/null svc:8765 ; sleep 0.5; done"
+    depends_on:
+    - svc
+
+  svc:
+    image: public.ecr.aws/mhausenblas/ho11y:stable
+    ports:
+    - 8765:8765
+    environment:
+    - "OTEL_RESOURCE_ATTRIB=svc"
+    - "OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317"
+    - "HO11Y_INJECT_FAILURE=enabled"
+    depends_on:
+    - prometheus
+
+  prometheus:
+    image: prom/prometheus:v2.40.0
+    restart: always
+    ports:
+      - "9090:9090"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=33d
+    volumes:
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus_pyrra:/etc/prometheus/pyrra # <1>
+
+  pyrra-api:
+    image: ghcr.io/pyrra-dev/pyrra:v0.5.5
+    restart: always
+    command: # <2>
+      - api
+      - --prometheus-url=http://prometheus:9090
+      - --prometheus-external-url=http://localhost:9090
+      - --api-url=http://pyrra-filesystem:9444
+    ports:
+      - "9099:9099"
+
+  pyrra-filesystem: # <3>
+    image: ghcr.io/pyrra-dev/pyrra:v0.5.0
+    restart: always
+    command:
+      - filesystem
+      - --prometheus-url=http://prometheus:9090
+    volumes:
+      - ./pyrra:/etc/pyrra
+      - ./prometheus_pyrra:/etc/prometheus/pyrra
+
+volumes:
+  prometheus_pyrra: {}
