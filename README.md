@@ -107,35 +107,42 @@ You will also learn about alerting, usage, and cost tracking.
 1. Governance, usage, and cost tracking
 
 ## Chapter 8: Distributed Tracing
-_ETA: 03/2023_
+In this chapter we look at distributed tracing and how it can help us
+understand and troubleshoot microservices. You will use Jaeger to 
+troubleshoot a simple app.
 
-This chapter covers:
-
-* What Distributed Tracing is and why it's important
-* Seeing Distributed Tracing in action for troubleshooting
-* Considerations on how and where to use Distributed Tracing
-* How to go about selecting a Distributed Tracing solution
+1. What Distributed Tracing is and why it's important
+1. Seeing Distributed Tracing in action for troubleshooting
+1. Considerations on when to use Distributed Tracing
+1. How to go about selecting a Distributed Tracing solution
 
 ## Chapter 9: Developer Observability
-_ETA: 03/2023_
 
 This chapter covers:
 
-* What developer observability means
-* What continuous profiling is and why you should care
-* How observability drives developer productivity and what tooling is available
-
+1. What developer observability means
+1. What continuous profiling is and why you should care
+1. How observability drives developer productivity and available tooling
 
 ## Chapter 10: Service Level Objectives
-_ETA: 03/2023_
+_ETA: 04/2023_
 
-This chapter covers:
+This chapter will cover:
 
 * What we mean by Service Level Objectives (SLO)
 * How you can implement SLOs
 * The tooling available in the SLO space
 * Considerations for implementing SLOs
 
+## Chapter 11: Signal Correlation
+_ETA: 04/2023_
+
+This chapter will cover:
+
+* What we mean by signal correlation
+* Why you need correlation
+* How to implement signal correlation
+* Considerations for correlation
 
 ## Appendix A
 
