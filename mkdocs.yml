@@ -1,0 +1,52 @@
+site_name: 'Cloud Native Observability in Action'
+site_description: 'A Return-on-Investment driven, hands-on approach to observability'
+site_author: 'Michael Hausenblas'
+site_url: 'https://o11y-in-action.cloud/'
+copyright: 'Copyright &copy; Michael Hausenblas 2022-2023'
+nav:
+- "Home": index.md
+- "Chapters":
+  - "End-to-end": ch1.md
+  - "Signal Types": ch2.md
+  - "Signal Sources": ch3.md
+  - "Agents & Instrumentation": ch4.md
+  - "Back-end Destinations": ch5.md
+  - "Front-ends & All-in-ones": ch6.md
+  - "Cloud Operations": ch7.md
+  - "Distributed Tracing": ch8.md
+  - "Developer Observability": ch9.md
+  - "Service Level Objectives": ch10.md
+  - "Signal Correlation": ch11.md
+  - "Appendix": appendix.md
+- "Further Reading": further-reading.md
+theme:
+  name: 'material'
+  features:
+  - navigation.instant
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - toc.follow
+  - toc.integrate
+  icon:
+    logo: 'fontawesome/solid/layer-group'
+  font:
+    text: 'Lato'
+    code: 'PT Mono'
+  palette:
+    scheme: slate
+    primary: brown
+    accent: orange
+  highlightjs: true
+  hljs_languages:
+  - yaml
+  - json
+  - bash
+markdown_extensions:
+- toc:
+    permalink: true
+- admonition
+- codehilite:
+    linenums: true
+- pymdownx.details
+- pymdownx.superfences

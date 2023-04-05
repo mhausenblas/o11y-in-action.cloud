@@ -1,4 +1,7 @@
-### Cloud Native Observability in Action Further Reading
+---
+hide:
+  - navigation
+---
 
 [Install Loki with
 Docker](https://grafana.com/docs/loki/latest/installation/docker/)
