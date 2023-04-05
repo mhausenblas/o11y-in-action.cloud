@@ -1,0 +1,1173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Return-on-Investment driven, hands-on approach to observability">
+      
+      
+        <meta name="author" content="Michael Hausenblas">
+      
+      
+        <link rel="canonical" href="https://o11y-in-action.cloud/further-reading/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Further Reading - Cloud Native Observability in Action</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CPT+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"PT Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cloud Native Observability in Action" class="md-header__button md-logo" aria-label="Cloud Native Observability in Action" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l218.6-101zm212.4 204.4 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2a88.1 88.1 0 0 0 73.8 0l152-70.2zm-152 198.2 152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2a88.1 88.1 0 0 0 73.8 0z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cloud Native Observability in Action
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Further Reading
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ch1/" class="md-tabs__link">
+        Chapters
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Further Reading
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cloud Native Observability in Action" class="md-nav__button md-logo" aria-label="Cloud Native Observability in Action" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l218.6-101zm212.4 204.4 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2a88.1 88.1 0 0 0 73.8 0l152-70.2zm-152 198.2 152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101c-8.5-4-13.9-12.5-13.9-21.8s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2a88.1 88.1 0 0 0 73.8 0z"/></svg>
+
+    </a>
+    Cloud Native Observability in Action
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Chapters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Chapters" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Chapters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch1/" class="md-nav__link">
+        End-to-end
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch2/" class="md-nav__link">
+        Signal Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch3/" class="md-nav__link">
+        Signal Sources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch4/" class="md-nav__link">
+        Agents & Instrumentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch5/" class="md-nav__link">
+        Back-end Destinations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch6/" class="md-nav__link">
+        Front-ends & All-in-ones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch7/" class="md-nav__link">
+        Cloud Operations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch8/" class="md-nav__link">
+        Distributed Tracing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch9/" class="md-nav__link">
+        Developer Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10/" class="md-nav__link">
+        Service Level Objectives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        Signal Correlation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        Appendix
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Further Reading
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Further Reading</h1>
+
+<p><a href="https://grafana.com/docs/loki/latest/installation/docker/">Install Loki with
+Docker</a></p>
+<p><a href="https://gist.github.com/ruanbekker/b863902b3c9d7194e28fa68d0860cf6d">Tinkering with Loki, Promtail, Grafana, Prometheus, Nginx and
+Dnsmasq</a></p>
+<p><a href="https://www.mightywomble.com/using-grafana-to-visualise-syslog-files-with-loki-9a8869081fb5">Using Grafana to visualise syslog files with Loki | by The
+Mightywomble Tech Blog |
+Medium</a></p>
+<p><a href="https://gist.github.com/cspinetta/41db2cc7f03a5af49e1b1cfe68d1fea4">Promtail example extracting data from json
+log</a></p>
+<p><a href="https://grafana.com/docs/loki/latest/clients/promtail/pipelines/">Pipelines | Grafana
+Labs</a></p>
+<p><a href="https://dev.to/elalemanyo/how-to-install-docker-and-docker-compose-on-raspberry-pi-1mo">How To Install Docker and Docker-Compose On Raspberry Pi - DEV
+Community</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-go/blob/main/example/jaeger/main.go">opentelemetry-go/main.go at main ·
+open-telemetry/opentelemetry-go</a></p>
+<p><a href="https://aws.amazon.com/blogs/opensource/centralized-container-logging-fluent-bit/">Centralized Container Logging with Fluent Bit | AWS Open Source
+Blog</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-overview?tabs=PowerShellWindows">Azure Monitor agent overview - Azure Monitor | Microsoft
+Docs</a></p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html">Collecting metrics and logs from Amazon EC2 instances and on-premises
+servers with the CloudWatch agent - Amazon
+CloudWatch</a></p>
+<p><a href="https://cloud.google.com/monitoring/agent/">Google Cloud operations suite agents  |  Cloud
+Monitoring</a></p>
+<p><a href="https://logz.io/blog/logging-best-practices/">How to Log a Log: Application Logging Best Practices |
+Logz.io</a></p>
+<p><a href="https://gallery.ecr.aws/mh9/ho11y">ECR Public Gallery -
+ho11y</a></p>
+<p><a href="https://vimeo.com/369637700">Monitorama BAL 2019 - Bryan Liles - Traces, metrics, endpoints - The
+what, why, and how on
+Vimeo</a></p>
+<p><a href="https://medium.com/lightstephq/why-tracing-might-replace-almost-all-logging-790c7d7c5c2c">Why Tracing Might Replace (Almost) All Logging | by Ben Sigelman |
+LightstepHQ |
+Medium</a></p>
+<p><a href="https://prometheus.io/docs/practices/instrumentation/">Instrumentation |
+Prometheus</a></p>
+<p><a href="https://github.com/cncf/tag-observability/issues/18">Guidelines for developers on how to implement new metrics · Issue #18 ·
+cncf/tag-observability</a></p>
+<p><a href="https://github.com/kubernetes/community/blob/master/contributors/devel/sig-instrumentation/instrumentation.md">community/instrumentation.md at master ·
+kubernetes/community</a></p>
+<p><a href="https://opentelemetry.io/docs/collector/">Collector |
+OpenTelemetry</a></p>
+<p><a href="https://github.com/aws-observability/aws-otel-collector">aws-observability/aws-otel-collector: AWS Distro for OpenTelemetry
+Collector</a></p>
+<p><a href="https://github.com/grafana/grafana">grafana/grafana: The open and composable observability and data
+visualization platform. Visualize metrics, logs, and traces from
+multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB,
+Postgres and many
+more.</a></p>
+<p><a href="https://github.com/promlabs/promlens-public">promlabs/promlens-public: Public repository for PromLens documentation,
+issues, bugs, and feature
+requests</a></p>
+<p><a href="https://promcon.io/2018-munich/slides/bomb-squad-containing-the-cardinality-explosion.pdf">bomb-squad-containing-the-cardinality-explosion.pdf</a></p>
+<p><a href="https://dev.to/mhausenblas/revisiting-promcon-2018-panel-on-prometheus-long-term-storage-5f1p">Revisiting PromCon 2018 Panel On Prometheus Long-Term Storage - DEV
+Community</a></p>
+<p><a href="https://github.com/joe-elliott/tracing-example">joe-elliott/tracing-example</a></p>
+<p><a href="https://o11y.engineering/the-state-of-continuous-profiling-b89cdbdd47f6">On The State Of Continuous Profiling | by Michael Hausenblas | Dec,
+2021 |
+Medium</a></p>
+<p><a href="https://speakerdeck.com/jpkroehling/o11yfest-sampling-in-distributed-tracing">o11yfest - Sampling in Distributed Tracing - Speaker
+Deck</a></p>
+<p><a href="https://github.com/joe-elliott/tracing-example/blob/master/docker-compose.yaml">tracing-example/docker-compose.yaml at master ·
+joe-elliott/tracing-example</a></p>
+<p><a href="https://github.com/grafana/tempo/blob/main/example/docker-compose/local/docker-compose.yaml">tempo/docker-compose.yaml at main ·
+grafana/tempo</a></p>
+<p><a href="https://github.com/grafana/tempo/tree/main/example/docker-compose">tempo/example/docker-compose at main ·
+grafana/tempo</a></p>
+<p><a href="https://github.com/tarekziade/salvo">tarekziade/salvo: Like Boom, but based on
+Molotov</a></p>
+<p><a href="https://k6.io/docs/testing-guides/api-load-testing/">Intro to API Load Testing: The k6
+Guide</a></p>
+<p><a href="https://github.com/DataDog/go-profiler-notes/tree/main/guide">go-profiler-notes/guide at main ·
+DataDog/go-profiler-notes</a></p>
+<p><a href="https://github.com/opensearch-project/data-prepper">opensearch-project/data-prepper: Data Prepper is a component of the
+OpenSearch project that accepts, filters, transforms, enriches, and
+routes data at
+scale.</a></p>
+<p><a href="https://explain.depesz.com/s/Q6sQ">Q6sQ |
+explain.depesz.com</a></p>
+<p><a href="https://explain.depesz.com/s/8NW3">8NW3 |
+explain.depesz.com</a></p>
+<p><a href="https://openlineage.io/">Home | OpenLineage</a></p>
+<p><a href="https://backstage.io/">Backstage Software Catalog and Developer Platform · An open platform
+for building developer
+portals</a></p>
+<p><a href="https://blog.last9.io/the-origin-of-service-level-objectives/">The origin of Service Level Objectives | Last9 SRE
+Platform</a></p>
+<p><a href="https://dev.to/aws-builders/saving-on-aws-lambda-amazon-cloudwatch-logs-costs-51od">Saving on AWS Lambda Amazon CloudWatch Logs costs - DEV Community
+</a></p>
+<p><a href="https://medium.com/geekculture/how-to-monitor-docker-metrics-using-prometheus-grafana-707b970f1f06">How to monitor Docker metrics using Prometheus &amp; Grafana? | by Dhruvin
+Soni | Geek Culture | Mar, 2022 |
+Medium</a></p>
+<p><a href="https://www.cncf.io/blog/2022/03/08/cloud-native-observability-microsurvey-prometheus-leads-the-way-but-hurdles-remain-to-understanding-the-health-of-systems/">Cloud Native Observability Microsurvey: Prometheus leads the way, but
+hurdles remain to understanding the health of systems | Cloud Native
+Computing
+Foundation</a></p>
+<p><a href="https://mariadb.com/kb/en/server-monitoring-logs/">Server Monitoring &amp; Logs - MariaDB Knowledge
+Base</a></p>
+<p><a href="https://www.manning.com/books/logging-in-action">Logging in
+Action</a></p>
+<p><a href="https://dev.to/amitsaha/how-to-set-up-log-forwarding-in-a-kubernetes-cluster-using-fluent-bit-3bgk">How to Set up Log Forwarding in a Kubernetes Cluster Using Fluent Bit -
+DEV Community
+</a></p>
+<p><a href="https://www.appdynamics.com/blog/engineering/top-6-database-performance-metrics-to-monitor-in-enterprise-applications/">Top 6 Database Performance Metrics to Monitor in Enterprise
+Applications | Blog |
+AppDynamics</a></p>
+<p><a href="https://sematext.com/blog/log-aggregation/">What Is Log Aggregation: 101 Guide to Best Tools &amp; Practices -
+Sematext</a></p>
+<p><a href="https://github.com/CrunchyData/pgmonitor">CrunchyData/pgmonitor: PostgreSQL Monitoring, Metrics Collection and
+Alerting Resources from Crunchy
+Data</a></p>
+<p><a href="https://medium.com/pareture/monitor-kubernetes-api-server-audit-in-eks-3e8e6e18e7fb">Monitor Kubernetes API Server Audit in EKS | by Nick Gibbon |
+Pareture | Mar, 2022 |
+Medium</a></p>
+<p><a href="https://dev.to/aws-builders/observability-best-practices-when-running-fastapi-in-a-lambda-29h6">Observability Best Practices when running FastAPI in a Lambda - DEV
+Community
+</a></p>
+<p><a href="https://sirupsen.com/metrics">Metrics For Your Web Application\'s
+Dashboards</a></p>
+<p><a href="https://chrlschn.medium.com/thoughtworks-misses-the-mark-re-serverless-vs-kubernetes-9901d1b0f0c6">Thoughtworks Misses the Mark --- Re: Serverless vs. Kubernetes | by
+Charles Chen |
+Medium</a></p>
+<p><a href="https://medium.com/ibm-cloud/log-collectors-performance-benchmarking-8c5218a08fea">Who is the winner --- Comparing Vector, Fluent Bit, Fluentd performance
+| by Ajay Gupta | IBM Cloud |
+Medium</a></p>
+<p><a href="https://github.com/keyval-dev/opentelemetry-go-instrumentation">keyval-dev/opentelemetry-go-instrumentation: OpenTelemetry
+auto-instrumentation for Go
+applications</a></p>
+<p><a href="https://cloud.google.com/blog/products/devops-sre/querying-logs-just-got-easier-in-cloud-logging">Querying logs just got easier in Cloud Logging | Google Cloud
+Blog</a></p>
+<p><a href="https://www.datadoghq.com/blog/postgresql-monitoring/">Key Metrics for PostgreSQL Monitoring |
+Datadog</a></p>
+<p><a href="https://itnext.io/observability-part-1-intro-postgres-exporter-efe57ee2d534">Observability, Part 1: Intro &amp; Postgres-Exporter | by Tyler Owen |
+ITNEXT</a></p>
+<p><a href="https://sqlite.org/queryplanner.html">Query
+Planning</a></p>
+<p><a href="https://dev.to/sematext/monitoring-elasticsearch-with-sematext-2lcd">Monitoring Elasticsearch with Sematext - DEV Community
+</a></p>
+<p><a href="https://sysdig.com/blog/redis-prometheus/">How to monitor Redis with Prometheus --
+Sysdig</a></p>
+<p><a href="https://www.datadoghq.com/blog/top-dynamodb-performance-metrics/">Top DynamoDB Performance Metrics |
+Datadog</a></p>
+<p><a href="https://thenewstack.io/getting-started-with-opentelemetry-for-java/">Getting Started with OpenTelemetry for Java -- The New
+Stack</a></p>
+<p><a href="https://datatracker.ietf.org/doc/rfc3530/">RFC 3530 - Network File System (NFS) version 4
+Protocol</a></p>
+<p><a href="https://sre.google/workbook/eliminating-toil/">Google - Site Reliability
+Engineering</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/hostmetricsreceiver">opentelemetry-collector-contrib/receiver/hostmetricsreceiver at main ·
+open-telemetry/opentelemetry-collector-contrib</a></p>
+<p><a href="https://github.com/open-telemetry/oteps/blob/main/text/0119-standard-system-metrics.md">oteps/0119-standard-system-metrics.md at main ·
+open-telemetry/oteps</a></p>
+<p><a href="https://logz.io/blog/survey-review-key-challenges-of-scaling-observability-with-cloud-workloads/">Survey Review: Key Challenges of Scaling Observability with Cloud
+Workloads |
+Logz.io</a></p>
+<p><a href="https://medium.com/picus-security-engineering/collecting-dora-metrics-from-github-aws-ecr-and-aws-ecs-f915a6cd0b09">Collecting DORA Metrics from GitHub, AWS ECR and AWS ECS | by Furkan
+Taşbaşı | Picus Security Engineering |
+Medium</a></p>
+<p><a href="https://betterprogramming.pub/improving-code-design-with-opentelemetry-a-practical-guide-a08e6440c24d">Improving Code Design With OpenTelemetry --- A Practical Guide | by
+Roni Dover | May, 2022 | Better
+Programming</a></p>
+<p><a href="https://github.com/loggie-io/loggie">loggie-io/loggie: A lightweight, cloud-native data transfer agent and
+aggregator</a></p>
+<p><a href="https://medium.com/@connorbutch/the-importance-of-structured-logging-in-aws-and-anywhere-else-52a4534c53aa">The Importance of Structured Logging In AWS (and Anywhere Else) | by
+Connor Butch | May, 2022 |
+Medium</a></p>
+<p><a href="https://www.chrisarmstrong.dev/posts/observability-what-to-instrument">Observability: What to instrument? - Chris
+Armstrong</a></p>
+<p><a href="https://github.com/fluent/fluent-bit-docs/blob/43c4fe134611da471e706b0edb2f9acd7cdfdbc3/administration/aws-credentials.md">fluent-bit-docs/aws-credentials.md at
+43c4fe134611da471e706b0edb2f9acd7cdfdbc3 ·
+fluent/fluent-bit-docs</a></p>
+<p><a href="https://docs.fluentbit.io/manual/pipeline/outputs/cloudwatch#metrics-tutorial">Amazon CloudWatch - Fluent Bit: Official
+Manual</a></p>
+<p><a href="https://opensearch.org/docs/latest/opensearch/install/docker/">Docker - OpenSearch
+documentation</a></p>
+<p><a href="https://opentelemetry.io/docs/instrumentation/java/automatic/agent-config/">Agent Configuration |
+OpenTelemetry</a></p>
+<p><a href="https://logz.io/blog/nodejs-javascript-opentelemetry-auto-instrumentation/">Auto-Instrumenting Node.js JavaScript Apps with OpenTelemetry |
+Logz.io</a></p>
+<p><a href="https://aws.amazon.com/blogs/containers/capturing-logs-at-scale-with-fluent-bit-and-amazon-eks/">Capturing logs at scale with Fluent Bit and Amazon EKS |
+Containers</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector/blob/main/processor/memorylimiterprocessor/README.md">opentelemetry-collector/README.md at main ·
+open-telemetry/opentelemetry-collector</a></p>
+<p><a href="https://ubuntu.com/observability/what-is-observability">What is observability |
+Ubuntu</a></p>
+<p><a href="https://medium.com/@nico.stefani/end-to-end-web-performance-monitoring-with-prometheus-s01e01-7e17618dd77b">End-to-end web performance monitoring with Prometheus S01E01 | by
+Nicolas STEFANI | Aug, 2022 |
+Medium</a></p>
+<p><a href="https://medium.com/faun/overview-of-grafana-alerting-and-message-templating-for-slack-6bb740ec44af">Overview of Grafana Alerting and Message Templating for Slack | by
+Tanmay Bhat | Aug, 2022 | FAUN
+Publication</a></p>
+<p><a href="https://www.timescale.com/promscale">Promscale: the observability backend powered by SQL |
+Timescale</a></p>
+<p><a href="https://dataschool.com/data-modeling-101/row-vs-column-oriented-databases/">Compare Row vs Column Oriented
+Databases</a></p>
+<p><a href="https://learning.oreilly.com/library/view/fundamentals-of-data/9781098133283/">Fundamentals of Data
+Observability</a></p>
+<p><a href="https://github.com/influxdata/influxdb">influxdata/influxdb: Scalable datastore for metrics, events, and
+real-time
+analytics</a></p>
+<p><a href="https://github.com/OpenTSDB/opentsdb">OpenTSDB/opentsdb: A scalable, distributed Time Series
+Database.</a></p>
+<p><a href="https://dataintensive.net/">Designing Data-Intensive Applications (DDIA) --- an O'Reilly book by
+Martin Kleppmann (The Wild Boar
+Book)</a></p>
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics: VictoriaMetrics: fast, cost-effective
+monitoring solution and time series
+database</a></p>
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger: CNCF Jaeger, a Distributed Tracing
+Platform</a></p>
+<p><a href="https://zipkin.io/">OpenZipkin · A distributed tracing
+system</a></p>
+<p><a href="https://www.honeycomb.io/">Observability for Distributed Services |
+Honeycomb</a></p>
+<p><a href="https://lightstep.com/">The cloud-native reliability platform |
+Lightstep</a></p>
+<p><a href="https://newrelic.com/">Monitor, Debug and Improve Your Entire
+Stack</a></p>
+<p><a href="https://www.sumologic.com/">Cloud Log Management, Monitoring, SIEM Tools | Sumo
+Logic</a></p>
+<p><a href="https://www.instana.com/blog/how-to-supercharge-automatic-tracing-with-kubernetes-primitives/">How to Supercharge Automatic Tracing with Kubernetes Primitives -
+Instana</a></p>
+<p><a href="https://github.com/instana/instana-autotrace-webhook">instana/instana-autotrace-webhook</a></p>
+<p><a href="https://clymene-project.github.io/">Clymene-project</a></p>
+<p><a href="https://www.aspecto.io/">Observability Platform Built for Modern R&amp;D Teams |
+Aspecto</a></p>
+<p><a href="https://logz.io/">Logz.io: Cloud Observability for
+Engineers</a></p>
+<p><a href="https://lumigo.io/">Lumigo - Serverless Monitoring and Troubleshooting
+Platform</a></p>
+<p><a href="https://valyala.medium.com/high-cardinality-tsdb-benchmarks-victoriametrics-vs-timescaledb-vs-influxdb-13e6ee64dd6b">High-cardinality TSDB benchmarks: VictoriaMetrics vs TimescaleDB vs
+InfluxDB | by Aliaksandr Valialkin |
+Medium</a></p>
+<p><a href="https://chronosphere.io/">Take back control of observability -
+Chronosphere</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/grafana-plugin">Monitor Azure services and applications using Grafana - Azure Monitor
+| Microsoft
+Docs</a></p>
+<p><a href="https://cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed">Get started with managed collection  |  Operations Suite  |  Google
+Cloud</a></p>
+<p><a href="https://thanos.io/">Thanos - Highly available Prometheus setup with long term storage
+capabilities</a></p>
+<p><a href="https://cortexmetrics.io/">Cortex</a></p>
+<p><a href="https://grafana.com/oss/mimir/">Grafana Mimir | Grafana
+Labs</a></p>
+<p><a href="https://archive.fosdem.org/2020/schedule/event/m3db/">FOSDEM 2020 - Querying millions to billions of metrics with M3DB\'s
+inverted
+index</a></p>
+<p><a href="https://aws.amazon.com/xray/">AWS X-Ray -- Distributed Tracing
+System</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing">Distributed tracing in Azure Application Insights - Azure Monitor |
+Microsoft
+Docs</a></p>
+<p><a href="https://cloud.google.com/trace/docs/setup/go-ot">Go and OpenTelemetry  |  Cloud Trace  |  Google
+Cloud</a></p>
+<p><a href="https://aws.amazon.com/redshift/">Cloud Data Warehouse -- Amazon Redshift -- Amazon Web
+Services</a></p>
+<p><a href="https://prestodb.io/">Presto | Distributed SQL Query Engine for Big
+Data</a></p>
+<p><a href="https://clickhouse.com/">Fast Open-Source OLAP DBMS -
+ClickHouse</a></p>
+<p><a href="https://www.snowflake.com/product/architecture/">A Data Architecture Built for the Cloud | Snowflake Data
+Cloud</a></p>
+<p><a href="https://www.zabbix.com/documentation/6.0/en/manual/introduction/about">2 What is
+Zabbix</a></p>
+<p><a href="https://github.com/ccfos/nightingale/blob/main/README_EN.md">nightingale/README_EN.md at main ·
+ccfos/nightingale</a></p>
+<p><a href="https://www.nagios.com/">Nagios - Network, Server and Log Monitoring
+Software</a></p>
+<p><a href="https://icinga.com/">Icinga » Monitor your entire Infrastructure with
+Icinga</a></p>
+<p><a href="https://www.netdata.cloud/">Netdata: Monitoring and troubleshooting transformed -
+Netdata</a></p>
+<p><a href="https://learn.netdata.cloud/docs/overview/what-is-netdata">What is Netdata? | Learn
+Netdata</a></p>
+<p><a href="https://icinga.com/docs/icinga-2/latest/doc/01-about/">About - Icinga
+2</a></p>
+<p><a href="https://github.com/zabbix/zabbix">zabbix/zabbix: Real-time monitoring of IT components and services, such
+as networks, servers, VMs, applications and the
+cloud.</a></p>
+<p><a href="https://github.com/icinga/icinga2">Icinga/icinga2: The core of our monitoring platform with a powerful
+configuration language and REST
+API.</a></p>
+<p><a href="https://github.com/bluestreak01/questdb">bluestreak01/questdb: High Performance Time Series
+Database</a></p>
+<p><a href="https://www.timescale.com/blog/time-series-data/">What Is Time-Series Data, and Why Do I Need a Time-Series
+Database?</a></p>
+<p><a href="https://github.com/apache/skywalking">apache/skywalking: APM, Application Performance Monitoring
+System</a></p>
+<p><a href="https://landscape.cncf.io/?category=observability-and-analysis">CNCF Cloud Native Interactive
+Landscape</a></p>
+<p><a href="https://www.elastic.co/guide/en/ecs/current/ecs-reference.html">Overview | Elastic Common Schema (ECS) Reference [8.3] |
+Elastic</a></p>
+<p><a href="https://grafana.com/docs/loki/latest/logql/">LogQL | Grafana Loki
+documentation</a></p>
+<p><a href="https://datatracker.ietf.org/doc/rfc5424/">RFC 5424 - The Syslog
+Protocol</a></p>
+<p><a href="https://github.com/google/pprof">google/pprof: pprof is a tool for visualization and analysis of
+profiling data</a></p>
+<p><a href="https://secureframe.com/hub/soc-2/requirements">SOC 2 Compliance Requirements |
+Secureframe</a></p>
+<p><a href="https://www.influxdata.com/products/flux/">Flux</a></p>
+<p><a href="https://github.com/Altinity/clickhouse-operator">Altinity/clickhouse-operator: The Altinity Operator for ClickHouse
+creates, configures and manages ClickHouse clusters running on
+Kubernetes</a></p>
+<p><a href="https://altinity.com/blog/2019/3/15/clickhouse-networking-part-1">ClickHouse Networking, Part 1 -- Altinity | The Real Time Data
+Company</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/README.md">opentelemetry-collector-contrib/README.md at main ·
+open-telemetry/opentelemetry-collector-contrib</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/fluentforwardreceiver/README.md">opentelemetry-collector-contrib/README.md at main ·
+open-telemetry/opentelemetry-collector-contrib</a></p>
+<p><a href="http://www.cs.umd.edu/~abadi/papers/abadisigmod06.pdf">Integrating Compression and Execution in Column-Oriented Database
+Systems</a></p>
+<p><a href="https://cloud.google.com/blog/products/bigquery/inside-capacitor-bigquerys-next-generation-columnar-storage-format">Inside Capacitor, BigQuery's next-generation columnar storage format |
+Google Cloud
+Blog</a></p>
+<p><a href="https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#primary-keys-and-indexes-in-queries">MergeTree | ClickHouse
+Docs</a></p>
+<p><a href="https://blog.jscrambler.com/the-data-processing-holy-grail-row-vs-columnar-databases/">The Data Processing Holy Grail? Row vs. Columnar Databases |
+Jscrambler
+Blog</a></p>
+<p><a href="https://people.brandeis.edu/~nga/papers/VLDB05.pdf">C-Store: A Column-oriented
+DBMS</a></p>
+<p><a href="http://www.vldb.org/pvldb/vol8/p1816-teller.pdf">FB Gorilla paper
+2015</a></p>
+<p><a href="https://blog.last9.io/sample-vs-metrics-vs-cardinality/">Sample vs Metrics vs Cardinality | Last9 SRE
+Platform</a></p>
+<p><a href="https://github.com/Altinity/clickhouse-operator/blob/master/docs/quick_start.md">clickhouse-operator/quick_start.md at master ·
+Altinity/clickhouse-operator</a></p>
+<p><a href="https://github.com/open-telemetry/oteps/blob/81bb5cc1299a844e5f1c883935048657eec11f46/text/profiles/0212-profiling-vision.md">oteps/0212-profiling-vision.md at
+81bb5cc1299a844e5f1c883935048657eec11f46 ·
+open-telemetry/oteps</a></p>
+<p><a href="https://medium.com/@1095193290/clickcat-a-clickhouse-visual-interfaces-a6b5ce5effb2">ClickCat --- A ClickHouse Visual Interface | by wangqinghuan | Aug,
+2022 |
+Medium</a></p>
+<p><a href="https://github.com/jaegertracing/jaeger/tree/main/plugin/storage/grpc">jaeger/plugin/storage/grpc at main ·
+jaegertracing/jaeger</a></p>
+<p><a href="https://github.com/jaegertracing/jaeger-clickhouse">jaegertracing/jaeger-clickhouse: Jaeger ClickHouse storage plugin
+implementation</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector/blob/main/processor/README.md#exclusive-ownership">opentelemetry-collector/README.md at main ·
+open-telemetry/opentelemetry-collector</a></p>
+<p><a href="https://grafana.com/oss/tempo/">Grafana Tempo | Grafana
+Labs</a></p>
+<p><a href="https://github.com/metabase/metabase">metabase/metabase: The simplest, fastest way to get business
+intelligence and analytics to everyone in your
+company</a></p>
+<p><a href="https://superset.apache.org/">Welcome |
+Superset</a></p>
+<p><a href="https://www.tableau.com/">Business Intelligence and Analytics
+Software</a></p>
+<p><a href="https://aws.amazon.com/quicksight/">Amazon QuickSight - Business Intelligence Service - Amazon Web
+Services</a></p>
+<p><a href="https://powerbi.microsoft.com/en-us/">Data Visualization | Microsoft Power
+BI</a></p>
+<p><a href="https://docs.aws.amazon.com/quicksight/latest/user/welcome.html">What is Amazon QuickSight? - Amazon
+QuickSight</a></p>
+<p><a href="https://signoz.io/docs/tutorial/kubernetes-infra-metrics/">K8s Infra Metrics |
+SigNoz</a></p>
+<p><a href="https://www.instana.com/">Instana - Enterprise Observability and APM for Cloud-Native
+Applications</a></p>
+<p><a href="https://www.datadoghq.com/">Cloud Monitoring as a Service |
+Datadog</a></p>
+<p><a href="https://grafana.com/docs/grafana/latest/datasources/">Data sources | Grafana
+documentation</a></p>
+<p><a href="https://grafana.com/grafana/plugins/">Grafana Plugins - extend and customize your Grafana | Grafana
+Labs</a></p>
+<p><a href="https://github.com/grafana/terraform-provider-grafana">grafana/terraform-provider-grafana: Terraform Grafana
+provider</a></p>
+<p><a href="https://opensearch.org/blog/feature/2021/07/feature-highlight-opensearch-dashboards-notebooks/">Feature Deep Dive: OpenSearch Dashboards Notebooks ·
+OpenSearch</a></p>
+<p><a href="https://opensearch.org/blog/updates/2021/07/opensearch-general-availability-announcement/">1.0 is released! ·
+OpenSearch</a></p>
+<p><a href="https://logz.io/blog/opensearch-tutorial-installation-configuration/">OpenSearch Tutorial: Getting Started with Install and Configuration |
+Logz.io</a></p>
+<p><a href="https://www.manning.com/books/elasticsearch-in-action-second-edition">Elasticsearch in Action, Second
+Edition</a></p>
+<p><a href="https://logz.io/blog/kibana-tutorial/">Kibana Tutorial: Getting Started |
+Logz.io</a></p>
+<p><a href="https://www.elastic.co/guide/en/kibana/current/get-started.html">Quick start | Kibana Guide [8.4] |
+Elastic</a></p>
+<p><a href="https://opensearch.org/docs/latest/dashboards/index/">About Dashboards - OpenSearch
+documentation</a></p>
+<p><a href="https://www.elastic.co/kibana/">Kibana: Explore, Visualize, Discover Data |
+Elastic</a></p>
+<p><a href="https://www.metabase.com/docs/latest/databases/connecting">Adding and managing
+databases</a></p>
+<p><a href="https://datastudio.google.com/overview">Google Data Studio
+Overview</a></p>
+<p><a href="https://docs.aws.amazon.com/quicksight/latest/user/connecting-to-data-examples.html">Amazon QuickSight Connection examples - Amazon
+QuickSight</a></p>
+<p><a href="https://docs.microsoft.com/en-us/power-bi/connect-data/service-get-data">Data sources for Power BI - Power BI | Microsoft
+Docs</a></p>
+<p><a href="https://www.tableau.com/products/data-management">Data Management | Discover, understand, connect, and trust your
+data</a></p>
+<p><a href="https://github.com/openzipkin/openzipkin.github.io/wiki/OpenZipkin's-5-year-anniversary">OpenZipkin\'s 5 year anniversary · openzipkin/openzipkin.github.io
+Wiki</a></p>
+<p><a href="https://github.com/openzipkin/zipkin/tree/master/docker/examples">zipkin/docker/examples at master ·
+openzipkin/zipkin</a></p>
+<p><a href="https://www.rookout.com/">Rookout | Painless Cloud-Native
+Debugging</a></p>
+<p><a href="https://www.amazon.science/blog/calculating-the-differential-cost-of-code-changes">Calculating the differential cost of code changes - Amazon
+Science</a></p>
+<p><a href="https://leventov.medium.com/comparison-of-the-open-source-olap-systems-for-big-data-clickhouse-druid-and-pinot-8e042a5ed1c7">Comparison of the Open Source OLAP Systems for Big Data: ClickHouse,
+Druid, and Pinot | by Roman Leventov |
+Medium</a></p>
+<p><a href="https://docs.pinot.apache.org/">Introduction - Apache Pinot
+Docs</a></p>
+<p><a href="https://kamon.io/blog/observability-in-practice/">Observability in Practice |
+Kamon</a></p>
+<p><a href="https://skywalking.apache.org/">Apache
+SkyWalking</a></p>
+<p><a href="https://liangjunjiang.medium.com/application-performance-monitor-and-distributed-tracing-with-apache-skywalking-in-datahub-16bc65e6c670">Application Performance Monitor and Distributed Tracing with Apache
+SkyWalking in Datahub | by Liangjun Jiang |
+Medium</a></p>
+<p><a href="https://github.com/liangjun-jiang/distributed-tracing-in-datahub-with-skywalking">liangjun-jiang/distributed-tracing-in-datahub-with-skywalking: A step
+by step guide to integrate Apache Skywalking with LinkedIn\'s Datahub
+for application performance and monitoring
+purpose</a></p>
+<p><a href="https://signoz.io/blog/clickhouse-storage-monitoring/">Launching support for ClickHouse as storage backend for SigNoz |
+SigNoz</a></p>
+<p><a href="https://medium.com/@arsal_rehman/monitoring-tools-97c89cd83536">Monitoring Tools. What are Monitoring Tools? | by Arsal Ur Rehman |
+Sep, 2022 |
+Medium</a></p>
+<p><a href="https://github.com/eBay/flow-telemetry">eBay/flow-telemetry: Adding observability to
+feat...</a></p>
+<p><a href="https://medium.com/itnext/apache-druid-overview-running-in-kubernetes-and-monitoring-with-prometheus-4c8d29f6c8b9">Apache Druid: overview, running in Kubernetes and monitoring with
+Prometheus | by Arseny Zinchenko (setevoy) | Sep, 2022 |
+ITNEXT</a></p>
+<p><a href="https://medium.com/@apr_1985/from-critical-user-journey-to-slo-slis-7d9f27444ef7">From Critical User Journey to SLO/SLIs | by Adam Roberts | Sep, 2022
+|
+Medium</a></p>
+<p><a href="https://docs.datadoghq.com/synthetics/">Synthetic
+Monitoring</a></p>
+<p><a href="https://www.elastic.co/guide/en/observability/master/monitor-uptime-synthetics.html">Uptime and synthetic monitoring | Observability Guide [master] |
+Elastic</a></p>
+<p><a href="https://dev.to/aws-builders/synthetic-monitoring-using-aws-canaries-cloudwatch-12jb">Synthetic monitoring using AWS Canary &amp; Cloudwatch - DEV Community
+</a></p>
+<p><a href="https://crashlaker.github.io/2022/06/14/docker_compose_prometheus_alertmanager_grafana.html">Docker Compose Prometheus AlertManager Grafana - Carlos Aguni Personal
+Blog</a></p>
+<p><a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/#alerting-rules">Alerting rules |
+Prometheus</a></p>
+<p><a href="https://www.youtube.com/watch?v=PUdjca23Qa4">PromCon 2018: Life of an Alert -
+YouTube</a></p>
+<p><a href="https://github.com/open-telemetry/oteps/issues/169">Proposal: Supporting Real User Monitoring Events in OpenTelemetry ·
+Issue #169 ·
+open-telemetry/oteps</a></p>
+<p><a href="https://thanos.io/tip/components/rule.md/#alerting-rules">Thanos - Highly available Prometheus setup with long term storage
+capabilities</a></p>
+<p><a href="https://cortexmetrics.io/docs/guides/alertmanager-configuration/">Configuring Notification using Cortex Alertmanager |
+Cortex</a></p>
+<p><a href="https://keyval.dev/distributed-tracing-2025/">Distributed Tracing in 2025: What the future holds ---
+keyval</a></p>
+<p><a href="https://medium.com/geekculture/all-things-clock-time-and-order-in-distributed-systems-physical-time-in-depth-3c0a4389a838">All Things Clock, Time and Order in Distributed Systems: Physical Time
+in Depth | by Kousik Nath | Geek Culture |
+Medium</a></p>
+<p><a href="https://trstringer.com/otel-part5-propagation/">Observability with OpenTelemetry Part 5 - Propagation and Baggage |
+Thomas
+Stringer</a></p>
+<p><a href="https://www.packtpub.com/product/cloud-native-observability-with-opentelemetry/9781801077705">Cloud-Native Observability with OpenTelemetry |
+Packt</a></p>
+<p><a href="https://www.youtube.com/watch?v=aeFkxNqyr3g">OSA Con 2022: Signal Correlation, the Ho11y Grail | Developer
+Conference -
+YouTube</a></p>
+<p><a href="https://granulate.io/gprofiler/">gProfiler -
+Granulate</a></p>
+<p><a href="https://dzone.com/articles/shift-left-a-developers-pipeline-dream">Shift-Left: A Developer\'s Pipe(line) Dream? -
+DZone</a></p>
+<p><a href="https://learning.oreilly.com/library/view/what-is-ebpf/9781492097266/">What Is
+eBPF?</a></p>
+<p><a href="https://github.com/open-telemetry/oteps/issues/139">Proposal: Adding profiling as a support event type · Issue #139 ·
+open-telemetry/oteps</a></p>
+<p><a href="https://www.datadoghq.com/product/code-profiling/">Continuous Profiler |
+Datadog</a></p>
+<p><a href="https://documentation.prodfiler.com/">prodfiler-documentation | Documentation for Prodfiler, the distributed
+lightweight continuous whole-system
+profiler</a></p>
+<p><a href="https://research.google/pubs/pub36575/">Google-Wide Profiling: A Continuous Profiling Infrastructure for Data
+Centers -- Google
+Research</a></p>
+<p><a href="https://www.dynatrace.com/support/help/platform-modules/applications-and-microservices/profiling-and-optimization">Profiling and optimization | Dynatrace
+Docs</a></p>
+<p><a href="https://docs.newrelic.com/docs/apm/apm-ui-pages/events/thread-profiler-tool/">Thread profiler tool | New Relic
+Documentation</a></p>
+<p><a href="https://docs.newrelic.com/docs/apm/agents/java-agent/features/real-time-profiling-java-using-jfr-metrics/">Real-time profiling for Java using JFR metrics | New Relic
+Documentation</a></p>
+<p><a href="https://grafana.com/docs/phlare/latest/?pg=oss-phlare&amp;plcmt=hero-btn-3">Grafana Phlare documentation | Grafana Phlare
+documentation</a></p>
+<p><a href="https://www.jetbrains.com/profiler/">dotTrace Profiler: .NET Profiling Experience Like No Other by
+JetBrains</a></p>
+<p><a href="https://brendangregg.com/blog/2020-11-04/bpf-co-re-btf-libbpf.html">BPF binaries: BTF, CO-RE, and the future of BPF perf
+tools</a></p>
+<p><a href="https://nakryiko.com/posts/bpf-portability-and-co-re/">BPF CO-RE (Compile Once -- Run
+Everywhere)</a></p>
+<p><a href="https://github.com/polarsignals/frostdb">polarsignals/frostdb: ❄️ Coolest database around Embeddable column
+database written in
+Go.</a></p>
+<p><a href="https://www.timescale.com/blog/time-series-compression-algorithms-explained/">Time-series compression algorithms,
+explained</a></p>
+<p><a href="https://protobuf.dev/">Protocol Buffers
+Documentation</a></p>
+<p><a href="https://www.nobl9.com/">Nobl9 SLO Software and Tools to Manage Service Level Objectives, Error
+Budgeting, and
+Monitoring</a></p>
+<p><a href="https://www.slodlc.com/">SLO Development Lifecycle |
+SLODLC</a></p>
+<p><a href="https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md">community/slos.md at master · kubernetes/community ·
+GitHub</a></p>
+<p><a href="https://www.youtube.com/watch?v=AC38JtXXE50">SLO-Based Observability For All Kubernetes Cluster Components -
+Matthias Loibl &amp; Nadine Vehling -
+YouTube</a></p>
+<p><a href="https://dzone.com/articles/sla-vs-slo-vs-sli-understanding-the-similarities-a">SLA vs SLO vs SLI: Similarities and Differences -
+DZone</a></p>
+<p><a href="https://sre.google/books/">Google - Site Reliability
+Engineering</a></p>
+<p><a href="https://www.nobl9.com/community/sloconf">The first Service Level Objective Conference for Site Reliability
+Engineers</a></p>
+<p><a href="https://docs.nobl9.com/slocademy/SLI_Analyzer/">SLI Analyzer | Nobl9
+Documentation</a></p>
+<p><a href="https://www.honeycomb.io/slos">SLOs |
+Honeycomb</a></p>
+<p><a href="https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/">Concepts in service monitoring  |  Operations Suite  |  Google
+Cloud</a></p>
+<p><a href="https://github.com/lindb/lindb">lindb/lindb: LinDB is a scalable, high performance, high availability
+distributed time series
+database.</a></p>
+<p><a href="https://thenewstack.io/monitoring-microservices-red-method/">The RED Method: A New Approach to Monitoring Microservices - The New
+Stack</a></p>
+<p><a href="https://learning.oreilly.com/library/view/implementing-service-level/9781492076803/">Implementing Service Level
+Objectives</a></p>
+<p><a href="https://docs.datadoghq.com/monitors/service_level_objectives/">Service Level
+Objectives</a></p>
+<p><a href="https://docs.newrelic.com/docs/service-level-management/intro-slm/">Get started with New Relic service levels | New Relic
+Documentation</a></p>
+<p><a href="https://www.splunk.com/en_us/solutions/sli-slo-monitoring.html">SLI/SLO Monitoring |
+Splunk</a></p>
+<p><a href="https://www.dynatrace.com/support/help/platform-modules/cloud-automation/service-level-objectives">Service-level objectives | Dynatrace
+Docs</a></p>
+<p><a href="https://opentelemetry.io/docs/demo/kubernetes-deployment/">Kubernetes deployment |
+OpenTelemetry</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-demo">open-telemetry/opentelemetry-demo: This repository contains the
+OpenTelemetry Astronomy Shop, a microservice-based distributed system
+intended to illustrate the implementation of OpenTelemetry in a near
+real-world
+environment.</a></p>
+<p><a href="https://opentelemetry.io/docs/demo/screenshots/">Demo Screenshots |
+OpenTelemetry</a></p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-demo/blob/main/src/otelcollector/otelcol-config.yml">opentelemetry-demo/otelcol-config.yml at main ·
+open-telemetry/opentelemetry-demo ·
+GitHub</a></p>
+<p><a href="https://github.com/bufbuild/buf">bufbuild/buf: A new way of working with Protocol
+Buffers.</a></p>
+<p><a href="https://github.com/spluxx/Protoman">spluxx/Protoman: Postman for protobuf
+APIs</a></p>
+<p><a href="https://github.com/postmanlabs/postman-app-support/issues/2801#issuecomment-1002247567">Feature Request : Support for google protobuf · Issue #2801 ·
+postmanlabs/postman-app-support</a></p>
+<p><a href="https://grpc.io/docs/protoc-installation/">Protocol Buffer Compiler Installation |
+gRPC</a></p>
+<p><a href="https://kind.sigs.k8s.io/">kind</a></p>
+<p><a href="https://docs.docker.com/desktop/kubernetes/">Deploy on
+Kubernetes</a></p>
+<p><a href="https://k3s.io/">K3s</a></p>
+<p><a href="https://www.youtube.com/watch?v=-lHPDx90Ppg">SLOconf: SLO Math - by Steve McGhee -
+YouTube</a></p>
+<p><a href="https://arxiv.org/abs/2303.13402">[2303.13402] Return on Investment Driven
+Observability</a></p>
+<p><a href="https://www.youtube.com/watch?v=Ch5VIUjNJiQ">Observability---a data engineering challenge - Michael Hausenblas -
+YouTube</a></p>
+<p><a href="https://www.bwplotka.dev/2021/correlations-exemplars/">Correlating Signals Efficiently in Modern Observability |
+\@bwplotka</a></p>
+<p><a href="https://grafana.com/docs/grafana/latest/datasources/prometheus/">Prometheus data source | Grafana
+documentation</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation">Distributed tracing and telemetry correlation in Azure Application
+Insights - Azure Monitor | Microsoft
+Learn</a></p>
+<p><a href="https://cloud.google.com/logging/docs/view/correlate-logs">Correlate log entries  |  Cloud Logging  |  Google
+Cloud</a></p>
+<p><a href="https://lightstep.com/blog/correlations-fastest-way-to-investigate-issues-in-distributed-systems">Announcing Correlations: The fastest way to investigate issues |
+Lightstep
+blog</a></p>
+<p><a href="https://docs.datadoghq.com/dashboards/correlations/">Metric
+Correlations</a></p>
+<p><a href="https://www.datadoghq.com/blog/request-log-correlation/">Correlate Request Logs With Traces Automatically |
+Datadog</a></p>
+<p><a href="https://engineering.dynatrace.com/blog/correlating-distributed-traces-of-large-scale-systems/">Correlating distributed traces of large scale systems | Dynatrace
+Engineering</a></p>
+<p><a href="https://www.honeycomb.io/comparisons">APM Tools Comparison |
+Honeycomb</a></p>
+<p><a href="https://docs.newrelic.com/docs/alerts-applied-intelligence/applied-intelligence/incident-intelligence/change-applied-intelligence-correlation-logic-decisions/">Configure correlation logic with decisions | New Relic
+Documentation</a></p>
+<p><a href="https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Correlate">correlate - Splunk
+Documentation</a></p>
+<p><a href="https://community.appdynamics.com/t5/Knowledge-Base/Custom-Correlation-for-Java-Applications/ta-p/18775">Custom Correlation -
+appdynamics</a></p>
+<p><a href="https://www.sumologic.com/blog/siem-investigation-correlation/">Cloud Scale Correlation and Investigation with Cloud SIEM | Sumo
+Logic</a></p>
+<p><a href="https://docs.logz.io/user-guide/distributed-tracing/correlate-traces/">Logz.io Docs | Correlate logs and
+traces</a></p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../appendix/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Appendix" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Appendix
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Michael Hausenblas 2022-2023
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
