@@ -1,0 +1,44 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+  prometheus:
+    config:
+      scrape_configs:
+      - job_name: "echo-svc"
+        static_configs:
+        - targets: ["echo-svc:8888"]
+
+processors:
+  batch:
+    timeout: 10s
+    send_batch_size: 100
+
+exporters:
+  logging:
+    loglevel: debug
+  prometheus:
+    endpoint: "0.0.0.0:1234"
+    metric_expiration: 180m
+    enable_open_metrics: true # <1>
+    resource_to_telemetry_conversion:
+      enabled: true
+  jaeger:
+    endpoint: jaeger:14250
+    tls:
+      insecure: true
+
+service:
+  telemetry:
+    logs:
+      level: debug
+  pipelines: # <2>
+    metrics:
+      receivers: [ prometheus ]
+      processors: [ batch ]
+      exporters: [ logging, prometheus ]
+    traces:
+      receivers: [ otlp ]
+      processors: [ batch ]
+      exporters: [ logging, jaeger ]
