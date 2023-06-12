@@ -1,6 +1,6 @@
-module co11yia/ch2/logs
+module co11yia/ch2/metrics
 
-go 1.16
+go 1.20
 
 require (
 	github.com/prometheus/client_golang v1.11.0
