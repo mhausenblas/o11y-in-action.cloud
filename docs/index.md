@@ -7,12 +7,12 @@ hide:
 
 Welcome to the Cloud Native Observability in Action book! This is your
 Return on Investment driven hands-on guide to introducing observability in your
-organization. The book is currently available online via the
-[Manning MEAP Program](https://www.manning.com/books/cloud-observability-in-action)
+organization. The book is currently available online via 
+[Manning](https://www.manning.com/books/cloud-observability-in-action)
 and also the [code snippets](https://github.com/mhausenblas/o11y-in-action.cloud/tree/main/code) 
 we use for the hands-on exercises throughout the book are available.
 
-We expect that the book goes into print in May 2023.
+We expect that the book goes into print in August 2023.
 
 
 ![MEAP cover](co11yia-meap-cover.png)
