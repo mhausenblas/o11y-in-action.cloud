@@ -12,7 +12,7 @@ services:
     image: otel/opentelemetry-collector-contrib:0.55.0
     command: ["--config=/conf/otel-collector-config.yaml"] # <1>
     volumes:
-    - ./otel-config.yaml:/conf/otel-collector-config.yaml # <2>
+    - ./otel-config-alt.yaml:/conf/otel-collector-config.yaml # <2>
     ports:
     - "54526:54526" # <3>
     depends_on:
